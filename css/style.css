@@ -116,6 +116,80 @@ select {
   border: 0;
 }
 
+:root {
+  --red-color-400: hsl(0, 100%, 74%);
+  --green-color-400: hsl(154, 59%, 51%);
+  --purple-color-700: hsl(248, 32%, 49%);
+  --gray-color-900: hsl(249, 10%, 26%);
+  --purple-color-350: hsl(246, 25%, 77%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-repeat: no-repeat;
+  background-color: var(--red-color-400);
+  background-size: 100%;
+  background-position: center;
+}
+
+main {
+  display: flex;
+  width: min(90%, 50rem);
+  margin: auto 0;
+}
+
+.main1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.main1 h1 {
+  color: var(--white-color);
+}
+.main1 p {
+  color: var(--white-color);
+  font-size: 0.7rem;
+}
+
+.main2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+.main2 .top-ad {
+  background-color: var(--purple-color-700);
+  color: var(--white-color);
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.main2 form {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+.main2 button {
+  background-color: var(--green-color-400);
+  color: var(--white-color);
+  border: none;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

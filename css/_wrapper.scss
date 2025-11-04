@@ -1,0 +1,12 @@
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-repeat: no-repeat;
+  background-color: var(--red-color-400);
+  background-size: 100%;
+  background-position: center;
+}
