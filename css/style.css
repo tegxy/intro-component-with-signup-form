@@ -93,16 +93,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-/* 10. Focus styles (keyboard accessibility) */
-:focus-visible {
-  outline: 0.13rem solid #005fcc; /* Accessible blue focus ring */
-  outline-offset: 0.13rem;
-}
-
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
 /* 11. Visually hidden utility (for screen readers only) */
 .visually-hidden {
   position: absolute !important;
@@ -123,6 +113,8 @@ select {
   --gray-color-900: hsl(249, 10%, 26%);
   --purple-color-350: hsl(246, 25%, 77%);
   --white-color: hsl(0, 0%, 100%);
+  --blue-color: hsl(235, 86%, 35%);
+  --start-color: hsl(0, 0%, 80%);
 }
 
 .wrapper {
@@ -173,13 +165,6 @@ main {
   padding: 0.5rem;
   border-radius: 0.3rem;
 }
-.main2 form {
-  background-color: var(--white-color);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.5rem;
-}
 .main2 button {
   background-color: var(--green-color-400);
   color: var(--white-color);
@@ -188,6 +173,57 @@ main {
   border-radius: 0.3rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+form {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+}
+
+input {
+  width: 100%;
+  padding-right: 2.5rem;
+  /*this padding right is used to create space for the error-icon*/
+  padding-left: 0.5rem;
+  height: 2.5rem;
+  border: 0.06rem solid var(--start-color);
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--blue-color);
+}
+
+.error {
+  border-color: var(--red-color-400);
+}
+
+.error-icon {
+  display: none;
+  position: absolute;
+  right: 0.5rem;
+  /*this is 0.5rem from the right of the div.
+  the space is created from the 2.5rem padding-right in input*/
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.13rem;
+  height: 1.13rem;
+  pointer-events: none;
+}
+
+.text {
+  font-size: 0.6rem;
+  color: var(--red-color-400);
+  text-align: right;
 }
 
 .attribution {

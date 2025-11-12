@@ -94,16 +94,6 @@ select {
   }
 }
 
-/* 10. Focus styles (keyboard accessibility) */
-:focus-visible {
-  outline: 0.13rem solid #005fcc; /* Accessible blue focus ring */
-  outline-offset: 0.13rem;
-}
-
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
 /* 11. Visually hidden utility (for screen readers only) */
 .visually-hidden {
   position: absolute !important;
