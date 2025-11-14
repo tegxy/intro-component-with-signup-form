@@ -35,7 +35,6 @@ submitButton.onclick = function (e) {
           errorText,
           "Looks like this isn't an email"
         );
-        document.getElementById("email").style.color = "var(--red-color-400)";
       }
     } else if (input.name === "password" && content === "") {
       showError(input, errorIcon, errorText, "Password cannot be empty");

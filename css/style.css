@@ -223,6 +223,7 @@ input:focus {
 
 .error {
   border-color: var(--red-color-400);
+  color: var(--red-color-400);
 }
 
 .error-icon {
