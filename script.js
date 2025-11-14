@@ -24,7 +24,21 @@ submitButton.onclick = function (e) {
     errorText.textContent = "";
 
     if (input.name === "fname" && content === "") {
-      showError(input, errorIcon, errorText, "enter first name");
+      showError(input, errorIcon, errorText, "First Name cannot be empty");
+    } else if (input.name === "lname" && content == "") {
+      showError(input, errorIcon, errorText, "Last Name cannot be empty");
+    } else if (input.name === "email") {
+      if (content === "" || !emailPattern.test(content)) {
+        showError(
+          input,
+          errorIcon,
+          errorText,
+          "Looks like this isn't an email"
+        );
+        document.getElementById("email").style.color = "var(--red-color-400)";
+      }
+    } else if (input.name === "password" && content === "") {
+      showError(input, errorIcon, errorText, "Password cannot be empty");
     }
   });
 };

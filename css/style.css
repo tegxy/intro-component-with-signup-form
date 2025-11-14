@@ -134,6 +134,7 @@ main {
   display: flex;
   width: min(90%, 50rem);
   margin: auto 0;
+  justify-content: space-between;
 }
 
 .main1 {
@@ -142,6 +143,7 @@ main {
   justify-content: center;
   padding: 1rem;
   gap: 1rem;
+  flex: 1 1 45%;
 }
 .main1 h1 {
   color: var(--white-color);
@@ -149,6 +151,7 @@ main {
 .main1 p {
   color: var(--white-color);
   font-size: 0.7rem;
+  width: 22rem;
 }
 
 .main2 {
@@ -156,6 +159,7 @@ main {
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
+  flex: 1 1 55%;
 }
 .main2 .top-ad {
   background-color: var(--purple-color-700);
@@ -173,6 +177,20 @@ main {
   border-radius: 0.3rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+.terms {
+  display: flex;
+  justify-content: center;
+  font-size: 0.5rem;
+}
+.terms .terms1 {
+  color: var(--purple-color-350);
+  margin-right: 0.3rem;
+}
+.terms .terms2 {
+  color: var(--red-color-400);
+  margin-left: 0.3rem;
 }
 
 form {
@@ -200,7 +218,7 @@ input {
 }
 
 input:focus {
-  border-color: var(--blue-color);
+  border-color: var(--gray-color-900);
 }
 
 .error {
