@@ -120,13 +120,12 @@ select {
 .wrapper {
   font-family: "Poppins", sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
   min-height: 100dvh;
-  background-image: url(../images/bg-intro-desktop.png);
+  background-image: url(../images/bg-intro-mobile.png);
   background-repeat: no-repeat;
   background-color: var(--red-color-400);
-  background-size: 100%;
+  background-size: contain;
   background-position: center;
 }
 
@@ -168,6 +167,7 @@ main {
   text-align: center;
   padding: 0.5rem;
   border-radius: 0.3rem;
+  box-shadow: 0 0.3rem 0 hsla(0, 0%, 0%, 0.15);
 }
 .main2 button {
   background-color: var(--green-color-400);
@@ -177,6 +177,7 @@ main {
   border-radius: 0.3rem;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: 0 0.3rem 0 hsl(154, 73%, 41%);
 }
 
 .terms {
@@ -191,6 +192,7 @@ main {
 .terms .terms2 {
   color: var(--red-color-400);
   margin-left: 0.3rem;
+  font-weight: 700;
 }
 
 form {
@@ -253,4 +255,14 @@ input:focus {
 .attribution a {
   text-decoration: none;
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 48rem) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/bg-intro-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }/*# sourceMappingURL=style.css.map */
