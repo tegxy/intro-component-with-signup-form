@@ -2,6 +2,7 @@ const inputs = document.querySelectorAll("input");
 const submitButton = document.querySelector(".submit");
 
 submitButton.onclick = function (e) {
+  // e is a random variable. it could be anything else
   e.preventDefault(); //prevent form submission
 
   //function for adding error
